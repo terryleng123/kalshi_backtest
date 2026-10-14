@@ -1,0 +1,719 @@
+{
+ "A": {
+  "trades": 3,
+  "wins": 3,
+  "win_rate": 1.0,
+  "net_pnl": 3.63,
+  "return_pct": 0.73,
+  "max_dd_pct": 0,
+  "halted_on": null,
+  "pnl_by_month": {
+   "2026-05": 3.53,
+   "2026-07": 0.1
+  },
+  "pnl_by_quarter": {
+   "2026Q2": 3.53,
+   "2026Q3": 0.1
+  },
+  "event_hours_checked": 47572,
+  "crossed_candle_hours_excluded": 15,
+  "events": 1372,
+  "events_not_exactly_one_yes": 1,
+  "raw_opportunity_hours": 7,
+  "events_with_opportunity": 6,
+  "skipped_zero_volume": 3,
+  "median_edge_1set": 0.01,
+  "median_minleg_volume": 36.0
+ },
+ "B": {
+  "h8_m0.03_d1": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -56.41,
+   "return_pct": -11.28,
+   "max_dd_pct": 11.28,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -56.41
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -56.41
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.03_d1_NOSTOP": {
+   "trades": 309,
+   "wins": 78,
+   "win_rate": 0.252,
+   "net_pnl": -499.9,
+   "return_pct": -99.98,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -267.76,
+    "2026-05": -231.2,
+    "2026-06": -0.42,
+    "2026-07": -0.48,
+    "2026-08": -0.02,
+    "2026-09": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.38,
+    "2026Q3": -0.52
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.03_d2": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -95.88,
+   "return_pct": -19.18,
+   "max_dd_pct": 19.18,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -95.88
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -95.88
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.03_d2_NOSTOP": {
+   "trades": 346,
+   "wins": 87,
+   "win_rate": 0.251,
+   "net_pnl": -499.87,
+   "return_pct": -99.97,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -266.74,
+    "2026-05": -231.58,
+    "2026-06": -0.9,
+    "2026-07": -0.1,
+    "2026-08": -0.43,
+    "2026-09": -0.1,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.22,
+    "2026Q3": -0.63,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.05_d1": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -56.41,
+   "return_pct": -11.28,
+   "max_dd_pct": 11.28,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -56.41
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -56.41
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.05_d1_NOSTOP": {
+   "trades": 304,
+   "wins": 77,
+   "win_rate": 0.253,
+   "net_pnl": -499.9,
+   "return_pct": -99.98,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -270.31,
+    "2026-05": -228.63,
+    "2026-06": -0.43,
+    "2026-07": -0.51,
+    "2026-08": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.37,
+    "2026Q3": -0.53
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.05_d2": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -95.88,
+   "return_pct": -19.18,
+   "max_dd_pct": 19.18,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -95.88
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -95.88
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.05_d2_NOSTOP": {
+   "trades": 346,
+   "wins": 87,
+   "win_rate": 0.251,
+   "net_pnl": -499.87,
+   "return_pct": -99.97,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -266.74,
+    "2026-05": -231.58,
+    "2026-06": -0.9,
+    "2026-07": -0.1,
+    "2026-08": -0.43,
+    "2026-09": -0.1,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.22,
+    "2026Q3": -0.63,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.1_d1": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -56.41,
+   "return_pct": -11.28,
+   "max_dd_pct": 11.28,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -56.41
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -56.41
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.1_d1_NOSTOP": {
+   "trades": 296,
+   "wins": 74,
+   "win_rate": 0.25,
+   "net_pnl": -499.9,
+   "return_pct": -99.98,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -276.37,
+    "2026-05": -222.63,
+    "2026-06": -0.35,
+    "2026-07": -0.51,
+    "2026-08": -0.02,
+    "2026-09": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.35,
+    "2026Q3": -0.55
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.129,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.1_d2": {
+   "trades": 5,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -95.88,
+   "return_pct": -19.18,
+   "max_dd_pct": 19.18,
+   "halted_on": "2026-04-15",
+   "pnl_by_month": {
+    "2026-04": -95.88
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -95.88
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h8_m0.1_d2_NOSTOP": {
+   "trades": 344,
+   "wins": 86,
+   "win_rate": 0.25,
+   "net_pnl": -499.87,
+   "return_pct": -99.97,
+   "max_dd_pct": 99.98,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -259.28,
+    "2026-05": -238.95,
+    "2026-06": -0.98,
+    "2026-07": -0.11,
+    "2026-08": -0.43,
+    "2026-09": -0.1,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -499.21,
+    "2026Q3": -0.64,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 8,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1334,
+   "brier_market_mid": 0.0955,
+   "calib_points": 7562
+  },
+  "h0_m0.03_d1": {
+   "trades": 11,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -71.34,
+   "return_pct": -14.27,
+   "max_dd_pct": 14.27,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -71.34
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -71.34
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.03_d1_NOSTOP": {
+   "trades": 853,
+   "wins": 300,
+   "win_rate": 0.352,
+   "net_pnl": -499.62,
+   "return_pct": -99.92,
+   "max_dd_pct": 99.96,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": 31.9,
+    "2026-05": 147.8,
+    "2026-06": 174.94,
+    "2026-07": -764.32,
+    "2026-08": -85.65,
+    "2026-09": -4.16,
+    "2026-10": -0.13
+   },
+   "pnl_by_quarter": {
+    "2026Q2": 354.64,
+    "2026Q3": -854.13,
+    "2026Q4": -0.13
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.03_d2": {
+   "trades": 9,
+   "wins": 2,
+   "win_rate": 0.222,
+   "net_pnl": -61.65,
+   "return_pct": -12.33,
+   "max_dd_pct": 15.0,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -61.65
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -61.65
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.03_d2_NOSTOP": {
+   "trades": 674,
+   "wins": 244,
+   "win_rate": 0.362,
+   "net_pnl": -499.79,
+   "return_pct": -99.96,
+   "max_dd_pct": 99.96,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -77.6,
+    "2026-05": -390.97,
+    "2026-06": -11.34,
+    "2026-07": -18.42,
+    "2026-08": -1.17,
+    "2026-09": -0.27,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -479.91,
+    "2026Q3": -19.86,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.03,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.05_d1": {
+   "trades": 11,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -71.34,
+   "return_pct": -14.27,
+   "max_dd_pct": 14.27,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -71.34
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -71.34
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.05_d1_NOSTOP": {
+   "trades": 905,
+   "wins": 326,
+   "win_rate": 0.36,
+   "net_pnl": -499.49,
+   "return_pct": -99.9,
+   "max_dd_pct": 99.95,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": 39.24,
+    "2026-05": 141.78,
+    "2026-06": 224.2,
+    "2026-07": -797.65,
+    "2026-08": -98.87,
+    "2026-09": -7.88,
+    "2026-10": -0.31
+   },
+   "pnl_by_quarter": {
+    "2026Q2": 405.22,
+    "2026Q3": -904.4,
+    "2026Q4": -0.31
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.05_d2": {
+   "trades": 9,
+   "wins": 2,
+   "win_rate": 0.222,
+   "net_pnl": -61.65,
+   "return_pct": -12.33,
+   "max_dd_pct": 15.0,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -61.65
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -61.65
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.05_d2_NOSTOP": {
+   "trades": 669,
+   "wins": 242,
+   "win_rate": 0.362,
+   "net_pnl": -499.8,
+   "return_pct": -99.96,
+   "max_dd_pct": 99.96,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -77.6,
+    "2026-05": -388.04,
+    "2026-06": -14.27,
+    "2026-07": -18.45,
+    "2026-08": -1.15,
+    "2026-09": -0.27,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -479.91,
+    "2026Q3": -19.87,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.05,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.1_d1": {
+   "trades": 11,
+   "wins": 0,
+   "win_rate": 0.0,
+   "net_pnl": -71.34,
+   "return_pct": -14.27,
+   "max_dd_pct": 14.27,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -71.34
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -71.34
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.1_d1_NOSTOP": {
+   "trades": 690,
+   "wins": 234,
+   "win_rate": 0.339,
+   "net_pnl": -499.72,
+   "return_pct": -99.94,
+   "max_dd_pct": 99.96,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": 21.47,
+    "2026-05": -82.26,
+    "2026-06": 197.34,
+    "2026-07": -598.67,
+    "2026-08": -36.38,
+    "2026-09": -1.12,
+    "2026-10": -0.1
+   },
+   "pnl_by_quarter": {
+    "2026Q2": 136.55,
+    "2026Q3": -636.17,
+    "2026Q4": -0.1
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d1"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1305,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.1_d2": {
+   "trades": 9,
+   "wins": 2,
+   "win_rate": 0.222,
+   "net_pnl": -61.65,
+   "return_pct": -12.33,
+   "max_dd_pct": 15.0,
+   "halted_on": "2026-04-16",
+   "pnl_by_month": {
+    "2026-04": -61.65
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -61.65
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  },
+  "h0_m0.1_d2_NOSTOP": {
+   "trades": 629,
+   "wins": 222,
+   "win_rate": 0.353,
+   "net_pnl": -499.81,
+   "return_pct": -99.96,
+   "max_dd_pct": 99.96,
+   "halted_on": null,
+   "pnl_by_month": {
+    "2026-04": -119.38,
+    "2026-05": -357.63,
+    "2026-06": -6.63,
+    "2026-07": -14.73,
+    "2026-08": -1.18,
+    "2026-09": -0.24,
+    "2026-10": -0.02
+   },
+   "pnl_by_quarter": {
+    "2026Q2": -483.64,
+    "2026Q3": -16.15,
+    "2026Q4": -0.02
+   },
+   "params": {
+    "decide_hour_local": 0,
+    "margin": 0.1,
+    "kelly": 0.25,
+    "lead": "d2"
+   },
+   "bracket_result_mismatches": 0,
+   "brier_model": 0.1349,
+   "brier_market_mid": 0.1024,
+   "calib_points": 7475
+  }
+ }
+}
