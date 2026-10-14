@@ -5,7 +5,9 @@ import json, os, sys, time, datetime as dt, requests
 B = "https://api.elections.kalshi.com/trade-api/v2"
 SERIES = ["KXHIGHNY","KXHIGHCHI","KXHIGHMIA","KXHIGHLAX","KXHIGHAUS","KXHIGHDEN","KXHIGHPHIL"]
 START = dt.datetime(2026,4,1,tzinfo=dt.timezone.utc)
-OUT = "data"; import threading; _tl = threading.local()
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "data")
+import threading; _tl = threading.local()
 def _s():
     if not hasattr(_tl,"s"): _tl.s = requests.Session()
     return _tl.s

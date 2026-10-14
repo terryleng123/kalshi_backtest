@@ -1,0 +1,23 @@
+# Regenerable Kalshi / forecast dumps (src/fetch.py, src/fetch_forecast.py)
+data/
+
+# Logs
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtualenvs
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
