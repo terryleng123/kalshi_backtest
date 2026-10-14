@@ -1,8 +1,11 @@
 """Backtests for Strategy A (mutually-exclusive mispricing) and B (weather forecast edge).
 Data: Kalshi hourly candlesticks (yes_bid/yes_ask CLOSE of each hour = proxy for top of book; NO depth info).
 """
-import json, glob, math, collections, datetime as dt
+import json, glob, math, collections, datetime as dt, os
 from zoneinfo import ZoneInfo
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA = os.path.join(ROOT, "data")
+REPORTS = os.path.join(ROOT, "reports")
 TZ = {"KXHIGHNY":"America/New_York","KXHIGHCHI":"America/Chicago","KXHIGHMIA":"America/New_York",
       "KXHIGHLAX":"America/Los_Angeles","KXHIGHAUS":"America/Chicago","KXHIGHDEN":"America/Denver","KXHIGHPHIL":"America/New_York"}
 START_EQ, DD_STOP, VOL_FRAC = 500.0, 0.10, 0.10
@@ -10,8 +13,8 @@ def fee(n, p):  # Kalshi taker fee, ceil to cent, per order (leg)
     return math.ceil(round(0.07*n*p*(1-p)*100, 6))/100 if n > 0 else 0.0
 def load():
     ev = collections.defaultdict(list)
-    for fn in sorted(glob.glob("data/KXHIGH*.json")):
-        s = fn.split("/")[-1][:-5]
+    for fn in sorted(glob.glob(os.path.join(DATA, "KXHIGH*.json"))):
+        s = os.path.basename(fn)[:-5]
         for m in json.load(open(fn)): m["series"] = s; ev[m["event"]].append(m)
     return ev
 def event_day(et):  # KXHIGHNY-26OCT12 -> date
@@ -77,7 +80,7 @@ def bracket(m):
     if st == "less": return -1e9, m["cap"]-0.5
     return None
 def strat_b(ev, dd_stop=True, decide_hour=8, margin=0.05, kelly=0.25, window=30, minhist=15, lead="d1"):
-    fc = json.load(open("data/forecasts.json")); li = 0 if lead=="d1" else 1
+    fc = json.load(open(os.path.join(DATA, "forecasts.json"))); li = 0 if lead=="d1" else 1
     # observed daily high = expiration_value (settlement source value)
     obs = {}
     for et, ms in ev.items():
@@ -131,14 +134,15 @@ def strat_b(ev, dd_stop=True, decide_hour=8, margin=0.05, kelly=0.25, window=30,
              brier_model=round(br_m,4), brier_market_mid=round(br_k,4), calib_points=len(cal))
     return s, bk
 if __name__ == "__main__":
+    os.makedirs(REPORTS, exist_ok=True)
     ev = load(); out = {}
     a, bka, raw = strat_a(ev); out["A"] = a
-    json.dump(raw, open("reports/strategyA_raw_opportunities.json","w")); json.dump(bka.trades, open("reports/strategyA_trades.json","w"))
+    json.dump(raw, open(os.path.join(REPORTS, "strategyA_raw_opportunities.json"),"w")); json.dump(bka.trades, open(os.path.join(REPORTS, "strategyA_trades.json"),"w"))
     out["B"] = {}
     for h in (8, 0): 
         for mg in (0.03, 0.05, 0.10):
             for ld in ("d1","d2"):
                 s, bk = strat_b(ev, decide_hour=h, margin=mg, lead=ld); out["B"][f"h{h}_m{mg}_{ld}"] = s
                 s2, _ = strat_b(ev, dd_stop=False, decide_hour=h, margin=mg, lead=ld); out["B"][f"h{h}_m{mg}_{ld}_NOSTOP"] = s2
-                if (h,mg,ld)==(8,0.05,"d1"): json.dump(bk.trades, open("reports/strategyB_trades_base.json","w"))
-    json.dump(out, open("reports/results.json","w"), indent=1); print(json.dumps(out, indent=1)[:6000])
+                if (h,mg,ld)==(8,0.05,"d1"): json.dump(bk.trades, open(os.path.join(REPORTS, "strategyB_trades_base.json"),"w"))
+    json.dump(out, open(os.path.join(REPORTS, "results.json"),"w"), indent=1); print(json.dumps(out, indent=1)[:6000])

@@ -2,7 +2,56 @@
 
 Strategies: **A** mutually-exclusive outcome mispricing; **B** weather (KXHIGH*) forecast edge.
 Universe: 7 daily-high series (NY, CHI, MIA, LAX, AUS, DEN, PHIL), events closing 2026-04-01 → 2026-10-12 (1,372 events, 8,230 markets).
-Run: `python3 src/fetch.py && python3 src/fetch_forecast.py && python3 src/backtest.py` → `reports/results.json`. See `reports/REPORT.md`.
+See `reports/REPORT.md` for the existing results write-up.
+
+## Setup
+
+```bash
+python3 -m pip install requests
+```
+
+Public Kalshi and Open-Meteo endpoints only; no auth or `.env` is required.
+
+## Regenerate data
+
+Raw market JSON, forecasts, and fetch logs are not checked in (`data/` is gitignored). Recreate them from the repo root, in this order:
+
+1. **Kalshi settled markets + hourly candlesticks** — `src/fetch.py`  
+   Writes `data/KXHIGH{NY,CHI,MIA,LAX,AUS,DEN,PHIL}.json` (creates `data/` if missing). Skips a series whose file already exists.
+
+   ```bash
+   python3 src/fetch.py
+   ```
+
+2. **Open-Meteo previous-run forecasts** — `src/fetch_forecast.py`  
+   Writes `data/forecasts.json` (creates `data/` if missing).
+
+   ```bash
+   python3 src/fetch_forecast.py
+   ```
+
+Scripts resolve `data/` and `reports/` from the repo root (the parent of `src/`), so they still work if you invoke them from another working directory.
+
+## Run the backtest
+
+Needs the files from both fetch steps:
+
+```bash
+python3 src/backtest.py
+```
+
+Writes (creates `reports/` if missing):
+
+- `reports/results.json` — headline stats for A and B variants
+- `reports/strategyA_raw_opportunities.json`
+- `reports/strategyA_trades.json`
+- `reports/strategyB_trades_base.json` (h8 / margin 0.05 / d1)
+
+Full pipeline:
+
+```bash
+python3 src/fetch.py && python3 src/fetch_forecast.py && python3 src/backtest.py
+```
 
 ## What history Kalshi actually exposes (checked 2026-10-13, all public, no auth needed)
 | Data | Available? | Endpoint |
